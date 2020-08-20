@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Image, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { FormHandles } from '@unform/core';
+
+import { Form } from '@unform/mobile';
 
 import Input from '../../components/input';
 import Button from '../../components/button';
@@ -10,6 +13,11 @@ import { Container, Title, AuxView, AuxButton, AuxButtonText } from './styles';
 
 const SignUp: React.FC = () => {
   const navigation = useNavigation();
+  const formRef = useRef<FormHandles>(null);
+
+  const handleSignUp = (data: object) => {
+    console.log(data);
+  };
 
   return (
     <Container>
@@ -18,12 +26,15 @@ const SignUp: React.FC = () => {
         <Title>New Account</Title>
       </View>
 
-      <Input name="user" icon="user" placeholder="Username" />
-      <Input name="email" icon="at-sign" placeholder="Email" />
-      <Input name="passwaord" icon="key" placeholder="Password" />
+      <Form ref={formRef} onSubmit={handleSignUp}>
+        <Input name="user" icon="user" placeholder="Username" />
+        <Input name="email" icon="at-sign" placeholder="Email" />
+        <Input name="password" icon="key" placeholder="Password" />
+      </Form>
+
       <Button
         onPress={() => {
-          navigation.navigate('SignIn');
+          formRef.current?.submitForm();
         }}>
         Go
       </Button>
