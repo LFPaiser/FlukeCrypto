@@ -3,6 +3,7 @@ import { View, ScrollView, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/mobile';
+import auth from '@react-native-firebase/auth';
 
 import Input from '../../components/input';
 import Button from '../../components/button';
