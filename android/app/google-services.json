@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "523783804543",
+    "firebase_url": "https://flukecrypto.firebaseio.com",
+    "project_id": "flukecrypto",
+    "storage_bucket": "flukecrypto.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:523783804543:android:20a4874b0fe000768a114a",
+        "android_client_info": {
+          "package_name": "com.cryptoquotas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "523783804543-r5n47okk01bvhhk5fi9t8b37vcvo58at.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr7d93tIliP7_kVafznnv0wGSTklD5Mvg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "523783804543-r5n47okk01bvhhk5fi9t8b37vcvo58at.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
