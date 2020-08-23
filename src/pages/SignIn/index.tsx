@@ -16,6 +16,24 @@ const SignIn: React.FC = () => {
 
   const handleSignIn = useCallback((data: object) => {
     console.log(data);
+
+    auth()
+      .signInWithEmailAndPassword('tobias.dog@gmail.com', 'WoofWoof!')
+      .then(() => {
+        console.log('Tobias signed in');
+        navigation.navigate('Dashboard');
+      })
+      .catch((error) => {
+        if (error.code === 'auth/email-already-in-use') {
+          console.log('That email address is already in use!');
+        }
+
+        if (error.code === 'auth/invalid-email') {
+          console.log('That email address is invalid!');
+        }
+
+        console.error(error);
+      });
   }, []);
 
   return (
